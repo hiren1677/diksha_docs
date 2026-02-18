@@ -1,0 +1,123 @@
+# Text content for the application
+# All text strings are centralized here for easy management
+
+common:
+  appName: "Diksha"
+  governmentOfIndia: "Government of India"
+  
+accessibility:
+  skipToMainContent: "Skip to Main Content"
+  screenReader: "Screen Reader"
+  siteMap: "Site Map"
+  fontSizeDecrease: "A-"
+  fontSizeNormal: "A"
+  fontSizeIncrease: "A+"
+  darkModeToggle: "Dark mode/Normal mode"
+
+header:
+  logo:
+    alt: "DIKSHA"
+  navigation:
+    home: "Home"
+    about: "About"
+    contribute: "Contribute"
+    dashboard: "Dashboard"
+    userGuide: "User Guide"
+  loginRegister: "Login/Register"
+
+footer:
+  description: "Your application description here."
+  copyright: "All rights reserved."
+
+home:
+  title: "Welcome to Diksha"
+  subtitle: "A modern learning platform built with React, TypeScript, and Bootstrap"
+  features:
+    learn:
+      title: "Learn"
+      description: "Access comprehensive courses and educational resources"
+    contribute:
+      title: "Contribute"
+      description: "Share your knowledge and help others learn"
+    connect:
+      title: "Connect"
+      description: "Join a community of learners and educators"
+
+about:
+  title: "About Diksha"
+  lead: "Diksha is a comprehensive learning platform dedicated to making education accessible to everyone."
+  mission:
+    title: "Our Mission"
+    description: "Our mission is to democratize education by providing high-quality learning resources and fostering a collaborative community of learners and educators."
+  offers:
+    title: "What We Offer"
+    qualityContent:
+      title: "Quality Content:"
+      description: "Curated courses and materials from industry experts"
+    communityDriven:
+      title: "Community Driven:"
+      description: "Learn from and contribute to a growing knowledge base"
+    modernPlatform:
+      title: "Modern Platform:"
+      description: "Built with cutting-edge technology for the best user experience"
+    freeAccess:
+      title: "Free Access:"
+      description: "Knowledge should be free and accessible to all"
+  getStarted:
+    title: "Get Started"
+    description: "Ready to begin your learning journey?"
+    button: "Go to Dashboard"
+
+contribute:
+  title: "Contribute to Diksha"
+  subtitle: "Share your knowledge and help others learn. Your contributions make a difference!"
+  form:
+    title: "Submit Your Content"
+    titleLabel: "Title"
+    titlePlaceholder: "Enter the title of your contribution"
+    categoryLabel: "Category"
+    categoryPlaceholder: "Select a category"
+    categories:
+      programming: "Programming"
+      design: "Design"
+      business: "Business"
+      science: "Science"
+      other: "Other"
+    descriptionLabel: "Description"
+    descriptionPlaceholder: "Provide a brief description"
+    contentLabel: "Content"
+    contentPlaceholder: "Share your knowledge here..."
+    submitButton: "Submit Contribution"
+  guidelines:
+    title: "Contribution Guidelines"
+    clearConcise: "✓ Be clear and concise"
+    accurate: "✓ Provide accurate information"
+    examples: "✓ Include examples when possible"
+    copyright: "✓ Respect copyright and attribution"
+    respectful: "✓ Be respectful and inclusive"
+
+dashboard:
+  title: "Dashboard"
+  stats:
+    totalCourses: "Total Courses"
+    completed: "Completed"
+    inProgress: "In Progress"
+    hoursLearned: "Hours Learned"
+  recentActivity:
+    title: "Recent Activity"
+    items:
+      - title: "Completed React Advanced Patterns"
+        time: "2 hours ago"
+        description: "You've earned a certificate!"
+      - title: "Started TypeScript Fundamentals"
+        time: "1 day ago"
+        description: "Progress: 25%"
+      - title: "Contributed to Community"
+        time: "3 days ago"
+        description: "Your article received 45 likes"
+  quickActions:
+    title: "Quick Actions"
+    browseCourses: "Browse Courses"
+    viewCertificates: "View Certificates"
+    editProfile: "Edit Profile"
+    settings: "Settings"

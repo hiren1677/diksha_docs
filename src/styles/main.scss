@@ -1,0 +1,1448 @@
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Custom SASS partials
+//@import './variables';
+//@import './components';
+//@import './layouts';
+
+// ============================================
+// Custom styles
+// ============================================
+body {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    // background-color: #F8F9FA;
+}
+
+a {
+  color: #1D4ED8;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(1.358490566, 53.6603773585, 106.641509434);
+  text-decoration: none;
+}
+
+.required {
+  color: #DF0404;
+}
+h2.section-title {
+  font-family: "Playfair Display", sans-serif !important;
+  font-size: 48px;
+  font-weight: 600;
+  color: #202020;
+}
+@media screen and (max-width: 991px) {
+  h2.section-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+h3.section-subtitle {
+  font-size: 36px;
+  font-weight: 600;
+  color: #202020;
+}
+.primary-text {
+  color: #1D4ED8;
+}
+
+/* Slick Slider */
+.slick-slider {
+	.slick-dots {
+		bottom: -35px;
+		li {
+			margin: 0px;
+			list-style: none;
+			button {
+				&:before {
+					display: flex !important;
+					align-items: center;
+					justify-content: center;
+					content: " ";
+					height: 10px;
+					width: 10px;
+					cursor: pointer;
+					border: 1px solid #1D4ED8;
+					border-radius: 16px;
+					background: #fff;
+					transition: all 0.3s ease;
+					opacity: 1;
+                    z-index: 1;
+				}
+			}
+		}
+		li.slick-active {
+			button {
+				&:before {
+					height: 10px;
+					width: 10px;
+					border: 1px solid #1D4ED8;
+					background: #1D4ED8;
+				}
+			}
+		}
+	}
+    .slick-arrow {
+        opacity: 0.75;
+        &:hover {
+            background: #fff;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+		&:before {
+			font-family: "FontAwesome";
+			font-size: 0.75rem;
+			color: #000;
+		}
+    }
+	.slick-prev {
+		left: 55px;
+		background: #fff;
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+		z-index: 9;
+		&:before {
+			content: "\f060";
+		}
+	}
+	.slick-next {
+		right: 55px;
+		background: #fff;
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+		z-index: 9;
+		&:before {
+			content: "\f061";
+		}
+	}
+}
+.slick-dots {
+	li {
+		button {
+			width: 10px;
+			height: 10px;
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.slick-slider {
+		.slick-prev {
+			left: 0px;
+		}
+		.slick-next {
+			right: 0px;
+		}
+	}
+}
+
+
+/* Top Header */
+.top-header {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    font-size: 0.75rem;
+    color: #EBEBEB;
+    background: linear-gradient(90deg, #005DA3 2.43%, #009746 100%);
+    .government-of-india {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .top-header-right {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        ul.navigation-links {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 991px) {
+                flex-wrap: wrap;
+            }
+
+            li {
+                margin: 0px;
+                padding: 0px;
+                display: inline-flex;
+                align-items: center;
+
+                &:after {
+                    padding: 0px 15px;
+                    content: "|";
+                    color: #ebebeb;
+                }
+
+                &:last-child:after {
+                    padding: 0px;
+                    content: "";
+                }
+
+                a {
+                    color: #EBEBEB;
+                    text-decoration: none;
+                }
+
+                .fontresize {
+                    display: inline-flex;
+                    align-items: center;
+
+                    button {
+                        font-family: "Playfair Display", sans-serif !important;
+                        color: #ebebeb;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        border: none;
+                        border-radius: 0px;
+                        background-color: transparent;
+
+                        &:hover {
+                            color: #ffffff;
+                            background-color: rgba(255, 255, 255, 0.15);
+                        }
+
+                        &.active {
+                            color: #ffffff;
+                            background-color: rgba(255, 255, 255, 0.15);
+                        }
+                    }
+                }
+
+                button.dark-mode-toggle {
+                    background-color: transparent;
+                    border: none;
+                }
+
+                ul.dropdown-menu {
+                    margin: 0px;
+                    padding: 0px;
+                    min-width: 180px;
+                    max-height: 300px;
+                    overflow-y: auto;
+                    transition: opacity 0.1s ease;
+
+                    li {
+                        padding: 10px 15px;
+                        width: 100%;
+                        cursor: pointer;
+                        border-bottom: 1px solid rgba(12, 78, 158, 0.1490196078);
+
+                        button.dark-mode-toggle svg path {
+                            fill: #fff;
+                        }
+
+                        &:after {
+                            content: "";
+                        }
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        &:active {
+                            font-weight: 700;
+                        }
+                    }
+
+                    &::-webkit-scrollbar {
+                        -webkit-appearance: none;
+                        width: 9px;
+                        height: 0.3125rem;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        cursor: pointer;
+                        border-radius: 5px;
+                        background: rgba(0, 0, 0, 0.25);
+                        -webkit-transition: color 0.2s ease;
+                        transition: color 0.2s ease;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background: rgba(0, 0, 0, 0.1);
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:991px) {
+        .top-header-right {
+            margin-top: 10px;
+            justify-content: center;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .top-header {
+        padding-top: 10px;
+        .government-of-india {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+/* Header and Navigation */
+.header {
+	background: #fff;
+	box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.1);
+	.navbar-nav {
+		margin-left: 20px;
+		.nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            color: #202020;
+            border-radius: 8px;
+            padding: 10px 15px;
+            &:hover {
+                color: #ffffff !important;
+                border-radius: 10px;
+                background: #1D4ED8 !important;
+            }
+        }
+        .nav-link.active {
+            color: #ffffff !important;
+            border-radius: 10px;
+            background: #1D4ED8 !important;
+        }
+	}
+}
+@media screen and (max-width: 991px) {
+	.header {
+        .navbar-nav {
+            margin-left: 0px;
+        }
+    }
+}
+
+/* Mobile Landscape Responsiveness */
+@media screen and (max-width: 991px) and (orientation: landscape) {
+	.header {
+		padding: 0.5rem 0;
+		min-height: auto;
+		
+		.navbar {
+			padding: 0.5rem 0;
+		}
+		
+		.navbar-nav {
+			.nav-link {
+				padding: 5px 10px;
+				font-size: 14px;
+				margin: 0 2px;
+			}
+		}
+	}
+}
+
+.login, .profile-dropdown {
+	display: none;
+}
+
+.logged-out {
+	.login {
+		display: block;
+	}
+	.profile-dropdown {
+		display: none;
+	}
+}
+
+.logged-in {
+	.login {
+		display: none;
+	}
+	.profile-dropdown {
+		display: block;
+	}
+}
+
+.header {
+	.navbar {
+		.search {
+			.form-control {
+				border-width: 1px 0px 1px 1px;
+			}
+		}
+	}
+}
+
+/* Browse by Content */
+.browse-by-content {
+	background: linear-gradient(261.1deg, #EBF7FB 0%, #FFFFFF 50.48%, #FFF8EE 100%);
+	.card {
+        cursor: pointer;
+		border: none;
+		border-radius: 1rem;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+		word-break: break-word;
+		&:hover {
+			translate: 0 calc(0.25rem * -2);
+			transition-duration: 300ms;
+			box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+		}
+		.card-header {
+			h6 {
+				font-family: Lato;
+				font-size: 24px;
+				font-weight: 900;
+			}
+			img {
+				padding: 10px;
+				width: 48px;
+				height: 48px;
+				font-size: 24px;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+				box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+				&.textbooks {
+					background: linear-gradient(135deg, #05DF72 0%, #00C950 100%);
+				}
+				&.videos {
+					background: linear-gradient(135deg, #FB64B6 0%, #F6339A 100%);
+				}
+				&.interactive-content {
+					background: linear-gradient(135deg, #9A76FF 0%, #8459FF 100%);
+				}
+				&.courses {
+					background: linear-gradient(135deg, #FF8904 0%, #FF6900 100%);
+				}
+			}
+		}
+		.card-body {
+			padding: 1rem;
+			.card-title {
+				font-size: 1rem;
+				font-weight: 600;
+				color: #434141;
+			}
+			.card-text {
+				font-size: 0.875rem;
+				color: #434141;
+			}
+			.viewall {
+				color: #1D4ED8;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.browse-by-content .card:hover {
+		translate: none;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.browse-by-content {
+	.card {
+		.card-header {
+			font-size: 1.25rem;
+			font-weight: bold;
+			background-color: #ffffff;
+			border-bottom: none;
+			padding: 1rem;
+		}
+	}
+}
+
+/* Browse by Subject */
+.browse-by-subject {
+	background-color: #ffffff;
+	a {
+		&.subjects {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: start;
+			font-size: 14px;
+			color: #202020;
+			line-height: normal;
+			border-radius: 20px;
+			word-break: break-word;
+			box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+			background: #FAF9F7;
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 88px;
+				height: 88px;
+				color: #1D4ED8;
+			}
+			&:hover {
+				translate: 0 calc(0.25rem * -2);
+				transition-duration: 300ms;
+				box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.browse-by-subject a.subjects:hover {
+		translate: none;
+		box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+
+/* Homepage Banner */
+.banner-section {
+    .language-buttons {
+        position: absolute;
+        z-index: 99;
+        bottom: 10px;
+        left: 50%;
+        display: flex;
+        transform: translate(-50%, 0px);
+
+        a.ant-btn {
+            margin: 0px 10px;
+            font-size: 18px !important;
+            text-transform: capitalize;
+            font-weight: 700;
+            height: 40px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lato', sans-serif;
+            line-height: 20px;
+            border-radius: 15px;
+            width: 270px !important;
+        }
+        a.ant-btn.btn-kumbh-mela {
+            color: #ed1b24 !important;
+            border: 3px solid #fff;
+            box-shadow: 0px 4px 4px 0px #507116;
+            background: #fdfe00;
+        }
+        a.ant-btn.btn-constitution-day {
+            color: #000 !important;
+            border: 3px solid #fff2d6;
+            box-shadow: 0px 4px 4px 0px #b98f7a;
+            background: #ffb001;
+        }
+        a.ant-btn.btn-birsa-munda {
+            color: #fff !important;
+            border: 3px solid #d09391;
+            box-shadow: 0px 4px 4px 0px #68441c;
+            background: #c5262a;
+        }
+        a.ant-btn.btn-virasat-and-vikas {
+            color: #fff !important;
+            border: 3px solid #ffe69e;
+            box-shadow: 0px 4px 4px 0px #897135;
+            background: #c6252d;
+        }
+        a.ant-btn.btn-national-space-day {
+            color: #000 !important;
+            border: 3px solid #fff;
+            box-shadow: 0px 4px 4px 0px #000;
+            background: #05d3fb;
+        }
+        a.ant-btn.btn-india-new-criminal-law {
+            color: #fff !important;
+            border: 3px solid #fff;
+            box-shadow: 0px 4px 4px 0px #000;
+            background: #4f5a8d;
+        }
+        .btn-pal-subject {
+            font-weight: 700;
+            color: #202020;
+            border-radius: 6px;
+            border: 1px solid #4D73E0; 
+            background-origin: border-box; 
+            background-clip: content-box, border-box; 
+            background: #2A7B9B;
+            background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(120, 149, 230, 1) 0%, rgba(42, 123, 155, 1) 0%, rgba(42, 123, 155, 1) 0%, rgba(93, 128, 226, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 90%, rgba(252, 208, 178, 1) 100%);
+            min-width: 180px;
+        }
+    }
+    .slick-slide img {
+        height: 240px;
+    }
+  
+}
+
+@media screen and (max-width:991px) {
+    .banner-section {
+        .language-buttons {
+            padding: 5px 0px;
+            position: absolute;
+            z-index: 99;
+            bottom: 0px;
+            left: 50%;
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            transform: translate(-50%, 0px);
+            text-align: center;
+            align-items: center;
+            width: 100%;
+            /* background: #ecf6ff; */
+            a.ant-btn {
+                margin: 0px 3px;
+                font-size: 11px !important;
+                font-weight: 500;
+                height: 20px !important;
+                line-height: 14px;
+                border-radius: 5px;
+                width: 160px !important;
+                border-width: 2px !important;
+                box-shadow: none !important;
+            }
+            .btn-pal-subject {
+                font-size: 8px;
+                font-weight: 700;
+                color: #202020;
+                border-radius: 6px;
+                border: 1px solid #4D73E0; 
+                background-origin: border-box; 
+                background-clip: content-box, border-box; 
+                background: #2A7B9B;
+                background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(120, 149, 230, 1) 0%, rgba(42, 123, 155, 1) 0%, rgba(42, 123, 155, 1) 0%, rgba(93, 128, 226, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 90%, rgba(252, 208, 178, 1) 100%);
+                min-width: 70px;
+            }
+        }
+        .slick-slide img {
+            height: 100px;
+        }
+    }
+}
+
+/* Browse by Grade */
+.browse-by-grade {
+	background: #F9F9F9;
+	.card {
+		border: 2px solid #BBBBBB;
+		border-radius: 15px;
+		cursor: pointer;
+		.card-header {
+			display: flex;
+			align-items: center;
+			border: none;
+			background-color: transparent;
+		}
+	}
+	.nav-tabs {
+		border: none;
+		width: 85%;
+		.nav-item {
+			flex: 1 1 0px;
+			a.nav-link {
+				font-family: Lato;
+				font-size: 18px;
+				font-weight: 700;
+				color: #202020;
+                text-align: center;
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				border-radius: 15px;
+				transition: all 0.3s ease;
+				transition-duration: 300ms;
+				border: 2px solid #BBBBBB;
+				background-color: #fff;
+				small {
+					font-size: 14px;
+					font-weight: 400;
+				}
+                &:hover {
+					color: #fff;
+					transition-duration: 300ms;
+					scale: 105% 105%;
+					border-color: #1D4ED8;
+					box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+					background: #1D4ED8;
+				}
+			}
+			a.nav-link.active {
+				font-weight: 900;
+				color: #fff;
+				transition-duration: 300ms;
+				border-color: #1D4ED8;
+				background: #1D4ED8;
+				&:hover {
+					scale: none;
+					cursor: default;
+				}
+				small {
+					font-size: 14px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	a {
+		height: 100%;
+	}
+	.nistha-course-nav-link {
+		margin: 5px 0px;
+		padding: 0px 15px;
+		width: 100%;
+		display: flex;
+		align-items: stretch;
+		.nistha-course-card {
+			padding: 15px;
+			display: flex;
+			width: 100%;
+			border-radius: 20px;
+			align-items: start;
+			justify-content: start;
+			cursor: pointer;
+			width: 100%;
+			box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+			background: #fff;
+			&:hover {
+				translate: 0 calc(0.25rem * -2);
+				transition-duration: 300ms;
+				box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+			}
+			.book-image {
+				width: 110px;
+				height: 150px;
+				display: flex;
+				align-items: start;
+				justify-content: start;
+				img {
+					max-width: 100%;
+					max-height: 100%;
+					width: 100%;
+					border-radius: 10px;
+					height: 150px;
+				}
+			}
+			.nistha-course-detail {
+				margin-left: 15px;
+				width: 100%;
+				text-align: left;
+				.course-strip {
+					display: none;
+				}
+				.book-detail {
+					margin-bottom: 15px;
+					display: block;
+					font-size: 15px;
+					font-weight: 500;
+					.course-icon {
+						display: none;
+					}
+				}
+				.course-title {
+					margin-bottom: 10px;
+					display: block;
+					h4 {
+						font-size: 18px;
+						font-weight: 600;
+						line-height: 24px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						word-break: break-word;
+						max-width: 25ch;
+						-webkit-box-orient: vertical;
+						display: -webkit-box;
+						-webkit-line-clamp: 2;
+						line-clamp: 2;
+						min-height: 2.85rem;
+					}
+				}
+				.bmc-detail {
+					font-size: 15px;
+					font-weight: 500;
+					p {
+						margin-bottom: 5px;
+						a {
+							color: #202020;
+							cursor: default;
+							text-decoration: none;
+							&:hover {
+								color: #202020;
+							}
+						}
+						&:last-child {
+							margin-bottom: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.carousel-indicators {
+		display: none;
+	}
+	.carousel {
+		.carousel-control-next {
+			width: 36px;
+			height: 36px;
+			display: block;
+			top: 40%;
+			right: -50px;
+		}
+		.carousel-control-prev {
+			width: 36px;
+			height: 36px;
+			display: block;
+			top: 40%;
+			left: -50px;
+		}
+	}
+	.view-btn-div {
+		.btn.disabled {
+			color: #fff !important;
+			border-color: #CCCCCC !important;
+			background-color: #CCCCCC !important;
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.browse-by-grade {
+		.nav-tabs {
+			border: none;
+			width: 100%;
+			.nav-item {
+				flex: 0 0 calc(50% - 0.75rem);
+				max-width: calc(50% - 0.75rem);
+				a.nav-link {
+					font-size: 14px;
+					font-weight: 900;
+					small {
+						font-size: 12px;
+					}
+				}
+				a {
+					&:hover {
+						scale: 100% 100%;
+					}
+				}
+				a.nav-link.active {
+					small {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.nav-item.explore-study-tab {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.nav-item {
+			a.nav-link {
+                font-size: 13px;
+                width: 100%;
+                small {
+                    font-size: 11px;
+                }
+            }
+		}
+	}
+}
+
+
+/* Browse by Tenant */
+.browse-by-tenant {
+	background-color: #fff;
+	.card {
+		cursor: pointer;
+		border-radius: 20px;
+		word-break: break-word;
+		&:hover {
+			scale: 105% 105%;
+			transition-duration: 300ms;
+			box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+		}
+		.card-body {
+			padding: 1rem;
+			.stage-icon {
+				padding: 10px;
+				width: 68px;
+				height: 68px;
+				object-fit: contain;
+				font-size: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 15px;
+				background: #fff;
+			}
+			.tenant-title {
+				font-size: 28px;
+				font-weight: 900;
+				line-height: 1.1;
+			}
+			.tenant-description {
+				font-size: 14px;
+				font-weight: 700;
+			}
+		}
+		.card-footer {
+			cursor: pointer;
+			border-top: none;
+			background: transparent;
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.col-md-3 {
+		&:nth-child(4n+1) {
+			.card {
+				border: 1px solid #D6E8FF;
+				background-color: #EFF6FF;
+			}
+		}
+		&:nth-child(4n+2) {
+			.card {
+				border: 1px solid #FDDAED;
+				background-color: #FDF2F8;
+			}
+		}
+		&:nth-child(4n+3) {
+			.card {
+				border: 1px solid #DED3FB;
+				background-color: #F0ECFB;
+			}
+		}
+		&:nth-child(4n+4) {
+			.card {
+				border: 1px solid #FFE9CF;
+				background-color: #FFF7ED;
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.browse-by-tenant {
+		.card {
+			&:hover {
+				scale: 100% 100%;
+			}
+			.card-body {
+				.tenant-title {
+					font-size: 20px;
+				}
+				.tenant-description {
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+/* Focus Areas */
+.focus-areas {
+	background-color: #F9F9F9;
+	.slick-slider {
+		.slick-list {
+			height: 100%;
+			.slick-track {
+				display: flex !important;
+				.slick-slide {
+					padding: 15px;
+					align-items: stretch;
+					height: inherit !important;
+                    div {
+                        height: 100%;
+                    }
+                    .card {
+                        overflow: hidden;
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 1rem;
+                        box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.1);
+                        &:hover {
+                            translate: 0 calc(0.25rem * -2);
+                            transition-duration: 300ms;
+                            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+                        }
+                        .card-header {
+                            border: none;
+                            background-color: transparent;
+                            .stage-icon {
+                                width: 80px;
+                                height: 80px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 15px;
+                            }
+                        }
+                        .card-body {
+                            padding: 1rem;
+                            h3 {
+                                font-size: 20px;
+                                font-weight: 900;
+                                color: #434141;
+                            }
+                            .area-icon {
+                                padding: 10px;
+                                width: 100%;
+                                height: 85px;
+                                font-size: 48px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 10px;
+                                background: #eee;
+                            }
+                        }
+                        .card-footer {
+                            color: #1D4ED8;
+                            border: none;
+                            background: transparent;
+                        }
+                    }
+                    &:nth-child(4n+1) {
+                        .card {
+                            .card-header {
+                                .stage-icon {
+                                    border: 1px solid #D6E8FF;
+                                    background: #EFF6FF;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4n+2) {
+                        .card {
+                            .card-header {
+                                .stage-icon {
+                                    border: 1px solid #FDDAED;
+                                    background: #FDF2F8;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4n+3) {
+                        .card {
+                            .card-header {
+                                .stage-icon {
+                                    border: 1px solid #DED3FB;
+                                    background: #F0ECFB;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4n+4) {
+                        .card {
+                            .card-header {
+                                .stage-icon {
+                                    border: 1px solid #FFE9CF;
+                                    background: #FFF7ED;
+                                }
+                            }
+                        }
+                    }
+				}
+			}
+		}
+        .slick-prev {
+            left: -55px;
+        }
+        .slick-next {
+            right: -55px;
+        }
+	}
+}
+@media screen and (max-width: 991px) {
+	.focus-areas {
+		.slick-slider {
+			.slick-list {
+				.slick-track {
+					.slick-slide {
+						padding: 0px;
+					}
+				}
+			}
+		}
+		.card {
+			&:hover {
+				translate: none;
+			}
+		}
+	}
+}
+
+/* Our Community */
+.our-community {
+    background: #ffffff;
+	.slick-slider {
+		.slick-list {
+			height: 100%;
+			.slick-track {
+				display: flex !important;
+				.slick-slide {
+					padding: 15px;
+					align-items: stretch;
+					height: inherit !important;
+                    // div {
+                    //     height: 100%;
+                    // }
+                    .card {
+                        border-radius: 15px;
+                        border: 2.5px solid #BBBBBB;
+                        .card-header {
+                            border-bottom: none;
+                            background-color: transparent;
+                        }
+                        &:hover {
+                            translate: 0 calc(0.25rem * -2);
+                            transition-duration: 300ms;
+                            box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+				}
+			}
+		}
+        
+        .slick-prev {
+            left: -55px;
+        }
+        .slick-next {
+            right: -55px;
+        }
+	}
+}
+@media screen and (max-width: 991px) {
+	.our-community {
+		.card {
+			&:hover {
+				translate: none;
+			}
+		}
+		.slick-slider {
+			.slick-list {
+				.slick-track {
+					.slick-slide {
+						padding: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+/* Download Diksha */
+.download-diksha {
+	background: #F9F9F9;
+	ul {
+		margin: 0px;
+		padding: 0px;
+		li {
+			position: relative;
+			padding-left: 32px;
+			margin-bottom: 10px;
+			list-style-type: none;
+			&::before {
+				font-family: "FontAwesome";
+				content: "\f058";
+				font-size: 1.1rem;
+				color: #FF6900;
+				position: absolute;
+				left: 0;
+				top: 2px;
+			}
+		}
+	}
+	.qr-code {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			padding: 20px;
+			width: 40%;
+			border-radius: 15px;
+			box-shadow: 0px 2.24px 4.47px -2.24px rgba(0, 0, 0, 0.1), 0px 4.47px 6.71px -1.12px rgba(0, 0, 0, 0.1);
+			background: #fff;
+		}
+	}
+	.downloads-and-ratings {
+		border-radius: 15px;
+		border: 1px solid #bbb;
+		background: #F0F0F0;
+		span.count-and-ratings {
+			font-family: Arial, Lato, sans-serif;
+			font-size: 48px;
+			font-weight: 700;
+			line-height: normal;
+		}
+		span {
+			font-size: 15px;
+			font-weight: normal;
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.download-diksha {
+		.qr-code {
+			img {
+				width: 80%;
+			}
+		}
+		.downloads-and-ratings {
+			flex: 1 1 0px;
+			span.count-and-ratings {
+				font-size: 36px;
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+/* About */
+.yellowbar {
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: #FCF2BD;
+}
+.about-heading {
+  color: #fff;
+  background: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/homepage/caption-bg.png), linear-gradient(74deg, rgba(2,79,157,1) 0%, rgba(75,72,228,0.8827906162464986) 100%);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.about-heading .section-title {
+  color: #ffffff;
+}
+.learners-and-teachers .card {
+  border: none;
+  box-shadow: 0 0.125rem 0.875rem 0 rgba(0,0,0,0.1);
+} 
+.state-of-art .custom-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem; /* same feel as Bootstrap g-3 */
+  align-items: stretch;
+}
+.state-of-art .custom-grid .card img {
+  border-radius: 0.9375rem;
+}
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .state-of-art .custom-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .state-of-art .custom-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card polish */
+.state-of-art .custom-grid .card {
+  font-weight: 600;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-self: stretch;
+}
+.state-of-art .custom-grid .card .card-body {
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: none;
+  border-radius: 15px;
+}
+
+.state-of-art .custom-grid .card .card-body * {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.state-of-art .custom-grid .card .card-body img {
+  height: 70px;
+  object-fit: scale-down;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 1) .card-body {
+  background: #E5FEDC73;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 2) .card-body {
+  background: #FFE4E473;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 3) .card-body {
+  background: linear-gradient(180deg, rgba(255, 240, 203, 0.45) 0%, rgba(255, 240, 203, 0) 100%)
+}
+.state-of-art .custom-grid .card:nth-child(9n + 4) .card-body {
+  background: #E8E8E873;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 5) .card-body {
+  background: #D0FCFF73;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 6) .card-body {
+  background: #E6F8D473;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 7) .card-body {
+  background: #F4E2FF73;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 8) .card-body {
+  background: #FDE0E273;
+}
+.state-of-art .custom-grid .card:nth-child(9n + 9) .card-body {
+  background: #FAFACF73;
+}
+.state-of-art .custom-grid .card .card-footer {
+  font-weight: normal;
+  height: 70px;
+  line-height: 1.25;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex: none;
+  border: none;
+  background-color: transparent;
+}
+.about-documents-section .card .card-body {
+  background-color: transparent;
+}
+
+.about-documents-section .card.card-bg-yellow {
+  border: none;
+  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/yellow.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-documents-section .card.card-bg-red {
+  border: none;
+  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/red.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-documents-section .card.card-bg-blue {
+  border: none;
+  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/blue.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-documents-section .card .card-footer {
+  border: none;
+  background-color: transparent;
+}
+
+/* Footer */
+footer {
+	.main-footer {
+		background-color: #fff;
+		.digital-infra-text {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1.3;
+		}
+        .logo-and-tagline {
+            img.footer-diksha-logo {
+                height: 55px;
+            }
+            .border-black {
+                border-color: #bbbbbb !important;
+            }
+        }
+		span.ncert-logo {
+			img {
+				width: 450px;
+			}
+		}
+	}
+	.raise-a-query {
+		margin-left: 90px;
+		padding-left: 90px;
+		border-left: 1px solid #BBBBBB;
+		background-color: #fff;
+	}
+	.footer-bar {
+		font-size: 0.875rem;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.footer {
+	.footer-bar {
+		ul {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
+			li {
+				margin: 0px;
+				padding: 0px 15px 0px 0px;
+				border-right: 1px solid #000;
+				&:last-child {
+					padding-right: 0px;
+					border-right: none;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	footer {
+		.main-footer {
+            .logo-and-tagline {
+                img.footer-diksha-logo {
+                    height: 40px;
+                }
+            }
+			span.ncert-logo {
+				img {
+					width: inherit;
+				}
+			}
+			.digital-infra-text {
+				font-size: 14px;
+			}
+		}
+		.raise-a-query {
+			margin-left: 0px;
+			padding-left: 0px;
+			border-left: none;
+		}
+	}
+}

@@ -1,0 +1,367 @@
+import React from 'react';
+
+const BrowsebyGrade: React.FC = () => {
+  return (
+    <div className="browse-by-grade py-5">
+    <div className="container">
+        <h2 className="mb-4 section-title">Browse by Grade</h2>
+        <div className="row">
+            <div className="col-md-12">
+                <ul className="nav nav-tabs explore-study-tab mb-4 gap-3" id="nisthaCertificateTab" role="tablist">
+                    <li className="nav-item tab-pane-link" role="presentation">
+                        <button className="nav-link found-stage-link px-4" id="found-stage-tab" data-bs-toggle="tab"
+                            data-bs-target="#found-stage" type="button" role="tab" aria-controls="found-stage"
+                            aria-selected="true">
+                            Foundational Stage
+                            <small className="d-block small-text fw-normal">Pre-Primary to Grade 2</small>
+                        </button>
+                    </li>
+                    <li className="nav-item tab-pane-link" role="presentation">
+                        <button className="nav-link prep-stage-link px-4" id="prep-stage-tab" data-bs-toggle="tab"
+                            data-bs-target="#prep-stage" type="button" role="tab" aria-controls="prep-stage"
+                            aria-selected="false">
+                            Preparatory Stage
+                            <small className="d-block small-text fw-normal">Grade 3-5</small>
+                        </button>
+                    </li>
+                    <li className="nav-item tab-pane-link" role="presentation">
+                        <button className="nav-link mid-stage-link px-4" id="mid-stage-tab" data-bs-toggle="tab"
+                            data-bs-target="#mid-stage" type="button" role="tab" aria-controls="mid-stage"
+                            aria-selected="false">
+                            Middle Stage
+                            <small className="d-block small-text fw-normal">Grade 6-8</small>
+                        </button>
+                    </li>
+                    <li className="nav-item tab-pane-link" role="presentation">
+                        <button className="nav-link sec-stage-link px-4" id="sec-stage-tab" data-bs-toggle="tab"
+                            data-bs-target="#sec-stage" type="button" role="tab" aria-controls="sec-stage"
+                            aria-selected="false">
+                            Secondary Stage
+                            <small className="d-block small-text fw-normal">Grade 9-12</small>
+                        </button>
+                    </li>
+                </ul>
+                <div className="tab-content d-block" id="nisthaCertificateTabContent">
+                    <div className="tab-pane fade found-stage" id="found-stage" role="tabpanel"
+                        aria-labelledby="found-stage-tab">
+                        <div className="row mb-3">
+                            <div className="col-md-12">
+                                <p>The Foundational stage under the National Education Policy 2020 will cover school
+                                    education of 3 years of Anganwadi/pre-school + 2 years in primary schools in
+                                    Grade 1-2; both covering ages 3-8. The Foundational Stage will consist of five
+                                    years of flexible, multilevel, play/activity-based learning and the curriculum
+                                    and pedagogy of ECCE.</p>
+                            </div>
+                        </div>
+                        <div className="row explore-filter">
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Board <span className="required">*</span></label>
+                                <select name="state" id="state1" className="form-select custom-fc explore-state-boards"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="state name">
+                                    <option value="Select Board" selected>Select Board</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Grade <span className="required">*</span></label>
+                                <select name="grade" id="grade" className="form-select custom-fc explore-grade-levels"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="grade name">
+                                    <option value="Select Grade" selected>Select Grade</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Content Type</label>
+                                <select name="grade" id="grade" className="form-select custom-fc explore-content-type"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="content type name">
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-4">
+                            <div className="col-md-12">
+                                <div id="foundStageCarousel"
+                                    className="nistha-testimonial-carousel nistha-course-carousel parent-study-carousel carousel slide"
+                                    data-bs-ride="carousel">
+                                    <ol className="carousel-indicators" id='foundation-carousel-indicators'>
+                                        {/* here is where we'll add the indicators */}
+                                    </ol>
+                                    <div className='carousel-inner' id='foundation-carousel-items'>
+                                        {/* here is where we'll add the slides */}
+                                    </div>
+                                    <a className="carousel-control-prev" href="#foundStageCarousel" role="button"
+                                        data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </a>
+                                    <a className="carousel-control-next" href="#foundStageCarousel" role="button"
+                                        data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12 text-center view-btn-div">
+                                <a href="#"
+                                    className="btn btn-primary study-view-more-btn view-study-courses-btn disabled">View
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="tab-pane fade prep-stage" id="prep-stage" role="tabpanel"
+                        aria-labelledby="prep-stage-tab">
+                        <div className="row mb-3">
+                            <div className="col-md-12">
+                                <p>The Preparatory Stage under the National Education Policy 2020 will cover school
+                                    education from Grade 3 to Grade 5 catering children with age group of 8-11
+                                    years. The Preparatory Stage builds on the play-based learning of the
+                                    Foundational Stage, introducing light textbooks and interactive classroom
+                                    activities to develop skills in reading, writing, speaking, physical education,
+                                    art, languages, science, and mathematics.</p>
+                            </div>
+                        </div>
+                        <div className="row explore-filter">
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Board <span className="required">*</span></label>
+                                <select name="state" id="state1" className="form-select custom-fc explore-state-boards"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="state name">
+                                    <option value="Select Board" selected>Select Board</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Grade <span className="required">*</span></label>
+                                <select name="grade" id="grade"
+                                    className="form-select custom-fc explore-foundation-grade-levels" tabIndex={0}
+                                    aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="grade name">
+                                    <option value="Select Grade" selected>Select Grade</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Content Type</label>
+                                <select name="grade" id="grade" className="form-select custom-fc explore-content-type"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="content type name">
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-4">
+                            <div className="col-md-12">
+                                <div id="prepStageCarousel"
+                                    className="nistha-testimonial-carousel nistha-course-carousel parent-study-carousel carousel slide"
+                                    data-bs-ride="carousel">
+                                    <ol className="carousel-indicators" id='preparatory-carousel-indicators'>
+                                    </ol>
+                                    <div className='carousel-inner' id='preparatory-carousel-items'>
+                                    </div>
+                                    <a className="carousel-control-prev" href="#prepStageCarousel" role="button"
+                                        data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </a>
+                                    <a className="carousel-control-next" href="#prepStageCarousel" role="button"
+                                        data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12 text-center view-btn-div">
+                                <a href="#"
+                                    className="btn btn-primary study-view-more-btn view-study-courses-btn disabled">View
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="tab-pane fade mid-stage" id="mid-stage" role="tabpanel"
+                        aria-labelledby="mid-stage-tab">
+                        <div className="row mb-3">
+                            <div className="col-md-12">
+                                <p>The Middle stage under the National Education Policy 2020 will cover school
+                                    education from Grade 6 to Grade 8 catering children with age group of 11-14
+                                    years. The Middle Stage builds on the Preparatory Stage by introducing subject
+                                    teachers and focusing on abstract concepts in sciences, mathematics, arts,
+                                    social sciences, and humanities. It emphasizes experiential learning and
+                                    interdisciplinary exploration alongside specialized instruction.</p>
+                            </div>
+                        </div>
+                        <div className="row explore-filter">
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Board <span className="required">*</span></label>
+                                <select name="state" id="state1" className="form-select custom-fc explore-state-boards"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="state name">
+                                    <option value="Select Board" selected>Select Board</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Grade <span className="required">*</span></label>
+                                <select name="grade" id="grade"
+                                    className="form-select custom-fc explore-mid-stage-grade-levels" tabIndex={0}
+                                    aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="grade name">
+                                    <option value="Select Grade" selected>Select Grade</option>
+                                </select>
+                            </div>
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Content Type</label>
+                                <select name="grade" id="grade" className="form-select custom-fc explore-content-type"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="content type name">
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-4">
+                            <div className="col-md-12">
+                                <div id="midStageCarousel"
+                                    className="nistha-testimonial-carousel nistha-course-carousel parent-study-carousel carousel slide"
+                                    data-bs-ride="carousel">
+                                    <ol className="carousel-indicators" id='middle-carousel-indicators'>
+                                    </ol>
+                                    <div className='carousel-inner' id='middle-carousel-items'>
+                                    </div>
+                                    <a className="carousel-control-prev" href="#midStageCarousel" role="button"
+                                        data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </a>
+                                    <a className="carousel-control-next" href="#midStageCarousel" role="button"
+                                        data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12 text-center view-btn-div">
+                                <a href="#"
+                                    className="btn btn-primary study-view-more-btn view-study-courses-btn disabled">View
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="tab-pane fade sec-stage" id="sec-stage" role="tabpanel"
+                        aria-labelledby="sec-stage-tab">
+                        <div className="row mb-3">
+                            <div className="col-md-12">
+                                <p>The Secondary stage under the National Education Policy 2020 will cover school
+                                    education from Grade 9 to Grade 12. catering children with age group of 14-18
+                                    years. The Secondary Stage offers four years of multidisciplinary study,
+                                    building on the Middle Stage with deeper subject focus, critical thinking,
+                                    flexibility, and student choice. Students may exit after Grade 10 and re-enter
+                                    later to pursue vocational or other courses in Grades 11-12.</p>
+                            </div>
+                        </div>
+                        <div className="row explore-filter">
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Board <span className="required">*</span></label>
+                                <select name="state" id="state1" className="form-select custom-fc explore-state-boards"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="state name">
+                                    <option value="Select Board" selected>Select Board</option>
+                                    <option value="apekx" id="ap_k-12_1" state-name="State (Andhra Pradesh)">Andhra Pradesh</option>
+                                    <option value="ar" id="ar_k-12" state-name="State (Arunachal Pradesh)">Arunachal Pradesh</option>
+                                    <option value="as" id="as_k-12" state-name="State (Assam)">Assam</option>
+                                    <option value="br" id="br_k-12" state-name="State (Bihar)">Bihar</option>
+                                    <option value="ch" id="ch_k-12" state-name="State (Chandigarh)">Chandigarh</option>
+                                    <option value="cg" id="cg_k-12" state-name="State (Chhattisgarh)">Chhattisgarh</option>
+                                    <option value="dl" id="dl_k-12_1" state-name="State (Delhi)">Delhi</option>
+                                    <option value="ga" id="ga_k-12" state-name="State (Goa)">Goa</option>
+                                    <option value="gj" id="gj_k-12" state-name="State (Gujarat)">Gujarat</option>
+                                    <option value="hr" id="hr_k-12" state-name="State (Haryana)">Haryana</option>
+                                    <option value="hp" id="hp_k-12" state-name="State (Himachal Pradesh)">Himachal Pradesh</option>
+                                    <option value="jk" id="jk_k-12" state-name="State (Jammu And Kashmir)">Jammu And Kashmir</option>
+                                    <option value="jh" id="jh_k-12" state-name="State (Jharkhand)">Jharkhand</option>
+                                    <option value="ka" id="ka_k-12" state-name="State (Karnataka)">Karnataka</option>
+                                    <option value="kl" id="kl_k-12" state-name="State (Kerala)">Kerala</option>
+                                    <option value="mp" id="mp_k-12" state-name="State (Madhya Pradesh)">Madhya Pradesh</option>
+                                    <option value="mitra" id="mh_k-12_1" state-name="State (Maharashtra)">Maharashtra</option>
+                                    <option value="mn" id="mn_k-12" state-name="State (Manipur)">Manipur</option>
+                                    <option value="ml" id="ml_k-12" state-name="State (Meghalaya)">Meghalaya</option>
+                                    <option value="mz" id="mz_k-12" state-name="State (Mizoram)">Mizoram</option>
+                                    <option value="nl" id="nl_k-12" state-name="State (Nagaland)">Nagaland</option>
+                                    <option value="od" id="od_k-12" state-name="State (Odisha)">Odisha</option>
+                                    <option value="pb" id="pb_k-12" state-name="State (Punjab)">Punjab</option>
+                                    <option value="rj" id="rj_k-12" state-name="State (Rajasthan)">Rajasthan</option>
+                                    <option value="sk" id="sk_k-12_1" state-name="State (Sikkim)">Sikkim</option>
+                                    <option value="tn" id="tn_k-12_5" state-name="State (Tamil Nadu)">Tamil Nadu</option>
+                                    <option value="ts" id="ts_k-12" state-name="State (Telangana)">Telangana</option>
+                                    <option value="tp" id="tp_k-12" state-name="State (Tripura)">Tripura</option>
+                                    <option value="up" id="up_k-12" state-name="State (Uttar Pradesh)">Uttar Pradesh</option>
+                                    <option value="uk" id="uk_k-12" state-name="State (Uttarakhand)">Uttarakhand</option>
+                                    <option value="wb" id="wb_k-12" state-name="State (West Bengal)">West Bengal</option>
+                                    <option value="an" id="an_k-12" state-name="UT (Andaman and Nicobar Islands)">Andaman and Nicobar Islands</option>
+                                    <option value="DD" id="dd_k-12" state-name="UT (DNH and DD)">Dadra & Nagar Haveli & Daman & Diu</option>
+                                    <option value="ld" id="ld_k-12" state-name="UT (Ladakh)">Ladakh</option>
+                                    <option value="lk" id="lk_k-12" state-name="UT (Lakshadweep)">Lakshadweep</option>
+                                    <option value="py" id="py_k-12" state-name="UT (Puducherry)">Puducherry</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div className="tab-pane fade sec-stage" id="sec-stage" role="tabpanel"
+                        aria-labelledby="sec-stage-tab">
+                        <div className="row mb-3">
+                            <div className="col-md-12">
+                                <p>The Secondary stage under the National Education Policy 2020 will cover school
+                                    education from Grade 9 to Grade 12. catering children with age group of 14-18
+                                    years. The Secondary Stage offers four years of multidisciplinary study,
+                                    building on the Middle Stage with deeper subject focus, critical thinking,
+                                    flexibility, and student choice. Students may exit after Grade 10 and re-enter
+                                    later to pursue vocational or other courses in Grades 11-12.</p>
+                            </div>
+                        </div>
+                        <div className="row explore-filter">
+                            <div className="col-md-4 mb-3 filter-wrap">
+                                <label className="form-label">Select Board <span className="required">*</span></label>
+                                <select name="state" id="state1" className="form-select custom-fc explore-state-boards"
+                                    tabIndex={0} aria-label="{{ site.data.text.selectState }}" role="presentation"
+                                    title="state name">
+                                    <option value="Select Board" selected>Select Board</option>
+                                    <option value="apekx" id="ap_k-12_1" state-name="State (Andhra Pradesh)">Andhra Pradesh</option>
+                                    <option value="ar" id="ar_k-12" state-name="State (Arunachal Pradesh)">Arunachal Pradesh</option>
+                                    <option value="as" id="as_k-12" state-name="State (Assam)">Assam</option>
+                                    <option value="br" id="br_k-12" state-name="State (Bihar)">Bihar</option>
+                                    <option value="ch" id="ch_k-12" state-name="State (Chandigarh)">Chandigarh</option>
+                                    <option value="cg" id="cg_k-12" state-name="State (Chhattisgarh)">Chhattisgarh</option>
+                                    <option value="dl" id="dl_k-12_1" state-name="State (Delhi)">Delhi</option>
+                                    <option value="ga" id="ga_k-12" state-name="State (Goa)">Goa</option>
+                                    <option value="gj" id="gj_k-12" state-name="State (Gujarat)">Gujarat</option>
+                                    <option value="hr" id="hr_k-12" state-name="State (Haryana)">Haryana</option>
+                                    <option value="hp" id="hp_k-12" state-name="State (Himachal Pradesh)">Himachal Pradesh</option>
+                                    <option value="jk" id="jk_k-12" state-name="State (Jammu And Kashmir)">Jammu And Kashmir</option>
+                                    <option value="jh" id="jh_k-12" state-name="State (Jharkhand)">Jharkhand</option>
+                                    <option value="ka" id="ka_k-12" state-name="State (Karnataka)">Karnataka</option>
+                                    <option value="kl" id="kl_k-12" state-name="State (Kerala)">Kerala</option>
+                                    <option value="mp" id="mp_k-12" state-name="State (Madhya Pradesh)">Madhya Pradesh</option>
+                                    <option value="mitra" id="mh_k-12_1" state-name="State (Maharashtra)">Maharashtra</option>
+                                    <option value="mn" id="mn_k-12" state-name="State (Manipur)">Manipur</option>
+                                    <option value="ml" id="ml_k-12" state-name="State (Meghalaya)">Meghalaya</option>
+                                    <option value="mz" id="mz_k-12" state-name="State (Mizoram)">Mizoram</option>
+                                    <option value="nl" id="nl_k-12" state-name="State (Nagaland)">Nagaland</option>
+                                    <option value="od" id="od_k-12" state-name="State (Odisha)">Odisha</option>
+                                    <option value="pb" id="pb_k-12" state-name="State (Punjab)">Punjab</option>
+                                    <option value="rj" id="rj_k-12" state-name="State (Rajasthan)">Rajasthan</option>
+                                    <option value="sk" id="sk_k-12_1" state-name="State (Sikkim)">Sikkim</option>
+                                    <option value="tn" id="tn_k-12_5" state-name="State (Tamil Nadu)">Tamil Nadu</option>
+                                    <option value="ts" id="ts_k-12" state-name="State (Telangana)">Telangana</option>
+                                    <option value="tp" id="tp_k-12" state-name="State (Tripura)">Tripura</option>
+                                    <option value="up" id="up_k-12" state-name="State (Uttar Pradesh)">Uttar Pradesh</option>
+                                    <option value="uk" id="uk_k-12" state-name="State (Uttarakhand)">Uttarakhand</option>
+                                    <option value="wb" id="wb_k-12" state-name="State (West Bengal)">West Bengal</option>
+                                    <option value="an" id="an_k-12" state-name="UT (Andaman and Nicobar Islands)">Andaman and Nicobar Islands</option>
+                                    <option value="DD" id="dd_k-12" state-name="UT (DNH and DD)">Dadra & Nagar Haveli & Daman & Diu</option>
+                                    <option value="ld" id="ld_k-12" state-name="UT (Ladakh)">Ladakh</option>
+                                    <option value="lk" id="lk_k-12" state-name="UT (Lakshadweep)">Lakshadweep</option>
+                                    <option value="py" id="py_k-12" state-name="UT (Puducherry)">Puducherry</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  );
+};
+
+export default BrowsebyGrade;
