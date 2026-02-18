@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <Container className="d-md-flex align-items-center">
             <div className="logo-and-tagline mb-4">
                 <span className="d-flex gap-4 mb-3">
-                    <a className="navbar-brand d-flex align-items-center" href="index.html">
+                    <a className="navbar-brand d-flex align-items-center" href="/">
                         <img src={DikshaLogo} alt="Diksha Logo" className="footer-diksha-logo" />
                     </a>
                     <span className="text-nowrap border-start border-black ps-4 digital-infra-text d-flex align-items-center">Digital Infrastructure<br/>For Knowledge Sharing</span>
