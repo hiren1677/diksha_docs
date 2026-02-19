@@ -22,7 +22,11 @@ a:hover {
   color: rgb(1.358490566, 53.6603773585, 106.641509434);
   text-decoration: none;
 }
-
+p {
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
 .required {
   color: #DF0404;
 }
@@ -47,7 +51,9 @@ h3.section-subtitle {
   color: #1D4ED8;
 }
 
-/* Slick Slider */
+// ============================================
+// Slick Slider
+// ============================================
 .slick-slider {
 	.slick-dots {
 		bottom: -35px;
@@ -55,6 +61,8 @@ h3.section-subtitle {
 			margin: 0px;
 			list-style: none;
 			button {
+                width: 10px;
+                height: 10px;
 				&:before {
 					display: flex !important;
 					align-items: center;
@@ -126,14 +134,6 @@ h3.section-subtitle {
 		}
 	}
 }
-.slick-dots {
-	li {
-		button {
-			width: 10px;
-			height: 10px;
-		}
-	}
-}
 @media screen and (max-width: 991px) {
 	.slick-slider {
 		.slick-prev {
@@ -145,8 +145,24 @@ h3.section-subtitle {
 	}
 }
 
+.yellowbar {
+    font-size: 1.125rem;
+    font-weight: 600;
+    background: #FCF2BD;
+}
+.heading-bluebg {
+    color: #fff;
+    background: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/homepage/caption-bg.png), linear-gradient(74deg, rgba(2,79,157,1) 0%, rgba(75,72,228,0.8827906162464986) 100%);
+    background-position: right;
+    background-repeat: no-repeat;
+    .section-title {
+        color: #ffffff;
+    }
+}
 
-/* Top Header */
+// ============================================
+// Top Header
+// ============================================
 .top-header {
     display: flex;
     align-items: center;
@@ -307,7 +323,9 @@ h3.section-subtitle {
 }
 
 
-/* Header and Navigation */
+// ============================================
+// Header and Navigation
+// ============================================
 .header {
 	background: #fff;
 	box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.1);
@@ -382,17 +400,9 @@ h3.section-subtitle {
 	}
 }
 
-.header {
-	.navbar {
-		.search {
-			.form-control {
-				border-width: 1px 0px 1px 1px;
-			}
-		}
-	}
-}
-
-/* Browse by Content */
+// ============================================
+// Browse by Content
+// ============================================
 .browse-by-content {
 	background: linear-gradient(261.1deg, #EBF7FB 0%, #FFFFFF 50.48%, #FFF8EE 100%);
 	.card {
@@ -407,6 +417,11 @@ h3.section-subtitle {
 			box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
 		}
 		.card-header {
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: bold;
+			background-color: #ffffff;
+			border-bottom: none;
 			h6 {
 				font-family: Lato;
 				font-size: 24px;
@@ -465,19 +480,9 @@ h3.section-subtitle {
 	}
 }
 
-.browse-by-content {
-	.card {
-		.card-header {
-			font-size: 1.25rem;
-			font-weight: bold;
-			background-color: #ffffff;
-			border-bottom: none;
-			padding: 1rem;
-		}
-	}
-}
-
-/* Browse by Subject */
+// ============================================
+// Browse by Subject
+// ============================================
 .browse-by-subject {
 	background-color: #ffffff;
 	a {
@@ -517,7 +522,9 @@ h3.section-subtitle {
 	}
 }
 
-/* Homepage Banner */
+// ============================================
+// Homepage Banner
+// ============================================
 .banner-section {
     .language-buttons {
         position: absolute;
@@ -641,7 +648,9 @@ h3.section-subtitle {
     }
 }
 
-/* Browse by Grade */
+// ============================================
+// Browse by Grade
+// ============================================
 .browse-by-grade {
 	background: #F9F9F9;
 	.card {
@@ -869,7 +878,9 @@ h3.section-subtitle {
 }
 
 
-/* Browse by Tenant */
+// ============================================
+// Browse by Tenant
+// ============================================
 .browse-by-tenant {
 	background-color: #fff;
 	.card {
@@ -962,7 +973,9 @@ h3.section-subtitle {
 	}
 }
 
-/* Focus Areas */
+// ============================================
+// Focus Areas
+// ============================================
 .focus-areas {
 	background-color: #F9F9F9;
 	.slick-slider {
@@ -1095,7 +1108,9 @@ h3.section-subtitle {
 	}
 }
 
-/* Our Community */
+// ============================================
+// Our Community
+// ============================================
 .our-community {
     background: #ffffff;
 	.slick-slider {
@@ -1153,7 +1168,10 @@ h3.section-subtitle {
 		}
 	}
 }
-/* Download Diksha */
+
+// ============================================
+// Download Diksha
+// ============================================
 .download-diksha {
 	background: #F9F9F9;
 	ul {
@@ -1220,148 +1238,192 @@ h3.section-subtitle {
 	}
 }
 
-/* About */
-.yellowbar {
-  font-size: 1.125rem;
-  font-weight: 600;
-  background: #FCF2BD;
+// ============================================
+// About
+// ============================================
+.learners-and-teachers {
+    .card {
+        border: none;
+        box-shadow: 0 0.125rem 0.875rem 0 rgba(0,0,0,0.1);
+    } 
 }
-.about-heading {
-  color: #fff;
-  background: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/homepage/caption-bg.png), linear-gradient(74deg, rgba(2,79,157,1) 0%, rgba(75,72,228,0.8827906162464986) 100%);
-  background-position: right;
-  background-repeat: no-repeat;
+.state-of-art {
+    .custom-grid {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 1rem; /* same feel as Bootstrap g-3 */
+        align-items: stretch;
+        .card {
+            font-weight: 600;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-self: stretch;
+            img {
+                border-radius: 0.9375rem;
+            }
+            .card-body {
+                height: 100px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: none;
+                border-radius: 15px;
+                * {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                img {
+                    height: 70px;
+                    object-fit: scale-down;
+                }
+            }
+            .card-footer {
+                font-weight: normal;
+                height: 70px;
+                line-height: 1.25;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex: none;
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
 }
-.about-heading .section-title {
-  color: #ffffff;
+
+//Large tablets / small laptops
+
+@media screen and (max-width: 1200px) {
+    .state-of-art .custom-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
-.learners-and-teachers .card {
-  border: none;
-  box-shadow: 0 0.125rem 0.875rem 0 rgba(0,0,0,0.1);
-} 
-.state-of-art .custom-grid {
+
+// Mobile 
+@media screen and (max-width: 991px) {
+    .state-of-art .custom-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Card polish
+.state-of-art {
+    .custom-grid {
+        .card {
+            &:nth-child(9n + 1) .card-body {
+                background: #E5FEDC73;
+            }
+            &:nth-child(9n + 2) .card-body {
+                background: #FFE4E473;
+            }
+            &:nth-child(9n + 3) .card-body {
+                background: linear-gradient(180deg, rgba(255, 240, 203, 0.45) 0%, rgba(255, 240, 203, 0) 100%);
+            }
+            &:nth-child(9n + 4) .card-body {
+                background: #E8E8E873;
+            }
+            &:nth-child(9n + 5) .card-body {
+                background: #D0FCFF73;
+            }
+            &:nth-child(9n + 6) .card-body {
+                background: #E6F8D473;
+            }
+            &:nth-child(9n + 7) .card-body {
+                background: #F4E2FF73;
+            }
+            &:nth-child(9n + 8) .card-body {
+                background: #FDE0E273;
+            }
+            &:nth-child(9n + 9) .card-body {
+                background: #FAFACF73;
+            }
+        }
+    }
+}
+
+.about-documents-section {
+    .card {
+        border: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .card-body {
+            background-color: transparent;
+        }
+        .card-footer {
+            border: none;
+            background-color: transparent;
+        }
+    }
+    .card.card-bg-yellow {
+        background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/yellow.png) !important;
+        a {
+            border-color: #B19834 !important;
+            background: #B19834 !important;
+        }
+    }
+    .card.card-bg-red {
+        background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/red.png) !important;
+        a {
+            border-color: #B76A6A !important;
+            background: #B76A6A !important;
+        }
+    }
+    .card.card-bg-blue {
+        background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/blue.png) !important;
+        a {
+            border-color: #6969B3 !important;
+            background: #6969B3 !important;
+        }
+    }
+}
+
+/* Contribute */
+.about-vidhyadaan {
+    background: #EAEEFF;
+}
+.elearning-resources-cards {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 1rem; /* same feel as Bootstrap g-3 */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem; /* same feel as Bootstrap g-3 */
   align-items: stretch;
 }
-.state-of-art .custom-grid .card img {
-  border-radius: 0.9375rem;
-}
-
-/* Large tablets / small laptops */
-@media (max-width: 1200px) {
-  .state-of-art .custom-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 991px) {
-  .state-of-art .custom-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Card polish */
-.state-of-art .custom-grid .card {
-  font-weight: 600;
+.elearning-resources-cards .card {
   border: none;
   display: flex;
   flex-direction: column;
   height: 100%;
   align-self: stretch;
+  box-shadow: 0 0.125rem 0.875rem 0 rgba(0,0,0,0.1);
 }
-.state-of-art .custom-grid .card .card-body {
-  height: 100px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: none;
-  border-radius: 15px;
+.elearning-resources-cards .card .card-footer {
+    border: none;
+    background-color: transparent;
 }
-
-.state-of-art .custom-grid .card .card-body * {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.elearning-resources-cards .card img {
+  border-radius: 0.9375rem;
 }
 
-.state-of-art .custom-grid .card .card-body img {
-  height: 70px;
-  object-fit: scale-down;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 1) .card-body {
-  background: #E5FEDC73;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 2) .card-body {
-  background: #FFE4E473;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 3) .card-body {
-  background: linear-gradient(180deg, rgba(255, 240, 203, 0.45) 0%, rgba(255, 240, 203, 0) 100%)
-}
-.state-of-art .custom-grid .card:nth-child(9n + 4) .card-body {
-  background: #E8E8E873;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 5) .card-body {
-  background: #D0FCFF73;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 6) .card-body {
-  background: #E6F8D473;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 7) .card-body {
-  background: #F4E2FF73;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 8) .card-body {
-  background: #FDE0E273;
-}
-.state-of-art .custom-grid .card:nth-child(9n + 9) .card-body {
-  background: #FAFACF73;
-}
-.state-of-art .custom-grid .card .card-footer {
-  font-weight: normal;
-  height: 70px;
-  line-height: 1.25;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex: none;
-  border: none;
-  background-color: transparent;
-}
-.about-documents-section .card .card-body {
-  background-color: transparent;
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .elearning-resources-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.about-documents-section .card.card-bg-yellow {
-  border: none;
-  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/yellow.png) !important;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Mobile */
+@media (max-width: 991px) {
+  .elearning-resources-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-.about-documents-section .card.card-bg-red {
-  border: none;
-  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/red.png) !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about-documents-section .card.card-bg-blue {
-  border: none;
-  background-image: url(https://obj.diksha.gov.in/ntp-content-production/homepage/prod/assets/imgs/about/blue.png) !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.about-documents-section .card .card-footer {
-  border: none;
-  background-color: transparent;
-}
-
 /* Footer */
 footer {
 	.main-footer {

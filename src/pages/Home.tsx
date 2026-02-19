@@ -10,7 +10,7 @@ import OurCommunity from './home/OurCommunity';
 import DownloadDikshaApp from './home/DownloadDikshaApp';
 
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <MainLayout>
       <BrowsebyContent />
@@ -25,4 +25,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;

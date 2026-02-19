@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ContributePage from './pages/ContributePage'
-import DashboardPage from './pages/DashboardPage'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contribute from './pages/Contribute'
+import Dashboard from './pages/Dashboard'
 
 // When opened from /dist/index.html or /dist/ use that path as basename so routes match.
 // At domain root (e.g. / or /about) basename stays ''.
@@ -17,11 +17,11 @@ function App() {
   return (
     <Router basename={getBasename()}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/index.html" element={<Navigate to="/" replace />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contribute" element={<ContributePage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contribute" element={<Contribute />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   )
